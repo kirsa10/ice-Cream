@@ -1,0 +1,277 @@
+/* Base styles for the whole contact section */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 100vh;
+    background: white;
+    overflow-x: hidden; /* Ensure no horizontal overflow */
+}
+
+/* Styling for the main form container */
+.form-container {
+    width: 500px;
+    max-width: 1200px; /* Adjusted to be wider */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: black;
+    text-align: center;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.form-container label {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: black;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+    margin-bottom: 20px;
+    padding: 15px; /* Increased padding for a larger input area */
+    font-size: 1.2em; /* Increased font size */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container textarea:focus {
+    border-color: #111010;
+    box-shadow: 0 0 10px rgba(249, 246, 245, 0.8);
+}
+
+.form-container button[type="submit"] {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: gray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: lightslategray;
+    transform: translateY(-2px);
+}
+
+/* Styling for the "Get in Touch" section */
+.get-in-touch {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 80px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.email-container,
+.address-container {
+    flex: 1;
+    padding: 30px;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.email-container:hover,
+.address-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.email-container h3,
+.address-container h3 {
+    margin-bottom: 15px;
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+}
+
+.email-container p,
+.address-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Add space between email and address containers */
+.address-container {
+    margin-left: 30px; /* Adjust as per your spacing preference */
+}
+
+/* Styling for the "Review the Shop" section */
+.review-shop {
+    width: 100%;
+    max-width: 900px; /* Adjusted to be wider */
+    margin-top: 80px;
+    padding: 40px;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.review-shop:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.review-shop h3 {
+    margin-bottom: 15px;
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+}
+
+.review-shop p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.star {
+    font-size: 32px;
+    color: #fcb69f;
+    transition: transform 0.3s ease-in-out;
+}
+
+.star:hover {
+    transform: scale(1.2);
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    font-size: 2.5em;
+    color: #666;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #fcb69f;
+}
+/* Social media section styles */
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .social-media a {
+    font-size: 2.5em;
+    color: lightslategray;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-media a:hover {
+    color: darkgray;
+  }
+  
+
+@media (max-width: 768px) {
+    .form-container,
+    .get-in-touch,
+    .review-shop,
+    .email-container,
+    .address-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .get-in-touch {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust margin between email and address containers for smaller screens */
+    .address-container {
+        margin-left: 0;
+        margin-top: 20px; /* Add margin-top to separate the sections */
+    }
+}
+
+/* Keyframe animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

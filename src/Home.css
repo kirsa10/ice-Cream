@@ -1,0 +1,170 @@
+/* Home.css */
+
+/* Home section styling */
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  width: 100%; /* Full viewport height */
+  background-image: url('https://static.vecteezy.com/system/resources/previews/037/246/244/non_2x/ai-generated-ice-cream-advertisment-background-with-copy-space-free-photo.jpg'); /* Replace with your image path */
+  background-size: cover; /* Cover the entire container */
+  background-position: center;
+  text-align: center;
+  color: black; /* Black text */
+  overflow: hidden; /* Hide overflow for background image zoom */
+  animation: zoom-background 10s infinite alternate; /* Background image zoom effect */
+}
+
+@keyframes zoom-background {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.1);
+  }
+}
+
+.home h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: slide-in-fwd-center 1s ease-out; /* Animation for title */
+}
+
+.home p {
+  font-size: 1.5rem;
+  margin-top: 0;
+  animation: fade-in 2s ease-in; /* Animation for paragraphs */
+}
+
+@keyframes fade-in {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes slide-in-fwd-center {
+  0% {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Button styling and animation */
+.home .btn {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #2a6496;
+   /* Button color */
+  color: rgb(189, 24, 109);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  animation: fade-in 3s ease-in; /* Fade-in animation for button */
+}
+
+.home .btn:hover {
+  background-color: #1d456e; /* Darker color on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Center the product section */
+#product {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Style for the heading */
+#product h2 {
+  font-family: 'Arial', sans-serif;
+  color: #2a6496;
+  margin-bottom: 20px;
+}
+
+/* Responsive grid for images */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Adjust spacing between columns */
+.col {
+  flex: 0 0 calc(50% - 10px); /* Adjust based on the number of columns */
+  max-width: calc(50% - 10px); /* Adjust based on the number of columns */
+  margin-bottom: 20px; /* Space between rows */
+  position: relative; /* Enable stacking context for overlay */
+  overflow: hidden; /* Hide overflow for zoom effect */
+}
+
+@media (min-width: 576px) {
+  .col-md {
+      flex: 0 0 calc(33.33% - 10px);
+      max-width: calc(33.33% - 10px);
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg {
+      flex: 0 0 calc(25% - 10px);
+      max-width: calc(25% - 10px);
+  }
+}
+
+/* Styling for the thumbnail images */
+.img-thumbnail {
+  width: 100%; /* Ensure images fill the container */
+  border: none; /* Remove default border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  border-radius: 5px; /* Add border radius */
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition for zoom effect and box shadow */
+}
+
+/* Different animation effect on hover */
+.img-thumbnail:hover {
+  transform: scale(1.05); /* Zoom in slightly on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Increase box shadow on hover */
+}
+
+/* Overlay for more interactivity */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  opacity: 0;
+  transition: opacity 0.3s; /* Fade-in transition */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+/* Text over image on overlay */
+.overlay-text {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s; /* Add transition for text */
+}
+
+.col:hover .overlay-text {
+  opacity: 1; /* Fade in text on hover */
+}

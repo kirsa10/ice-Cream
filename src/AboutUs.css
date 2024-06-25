@@ -1,0 +1,91 @@
+/* AboutUs.css */
+
+.about-container {
+    text-align: center;
+    padding: 50px 20px;
+    
+    height: 700px; /* Gradient background */
+    color: #333;
+    animation: fade-in 1.5s ease-in-out;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
+  }
+  
+  .about-intro {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Text shadow for better readability */
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+  
+  .mission,
+  .goal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    animation: slide-in 1s ease-out;
+    
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #d9534f;
+  }
+  
+  .mission p,
+  .goal p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+   
+  }
+  
+  @media (min-width: 768px) {
+    .about-content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hover effects */
+  .mission:hover,
+  .goal:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper box shadow on hover */
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
